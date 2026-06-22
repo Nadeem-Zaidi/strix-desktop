@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit"
-import { api } from "../../helper/helper_api_functions"
 import { Message, Session } from "../../types_and_interfaces/types";
 
 interface SessionState {
@@ -20,29 +19,10 @@ const initialState: SessionState = {
     error: null,
 }
 
-export const fetchSessions = createAsyncThunk(
-    'session/fetchsessions',
-    async () => {
-        const result = await api.getSessions();
-        return result;
-    }
-)
 
-export const fetchMessages = createAsyncThunk(
-    'session/fetchMessages',
-    async (sessionId: string) => {
-        const messages = await api.getMessages(sessionId);
-        return { sessionId, messages }
-    }
-)
 
-export const fetchSession = createAsyncThunk(
-    'session/fetchSession',
-    async (sessionId: string) => {
-        const session = await api.getSession(sessionId);
-        return session;
-    }
-)
+
+
 
 const saveSessionId = (id: string | null) => {
     if (id) sessionStorage.setItem("currentSessionId", id);
@@ -74,61 +54,6 @@ export const sessionSlice = createSlice({
             }
         }
     },
-    extraReducers: (builders) => {
-        builders
-            .addCase(fetchSessions.pending, (state) => {
-                state.loading = true;
-                state.error = null;
-            })
-            .addCase(fetchSessions.fulfilled, (state, action) => {
-                state.loading = false;
-                state.error = null;
-                const serverSessions: Session[] = action.payload;
-
-                // Preserve any locally added session not yet on server
-                const serverIds = new Set(serverSessions.map(s => s.id));
-                const localOnly = state.sessions.filter(s => !serverIds.has(s.id));
-
-                state.sessions = [...localOnly, ...serverSessions];
-            })
-            .addCase(fetchSessions.rejected, (state, action) => {
-                state.loading = false
-                state.error = action.error.message || 'Failed to fetch sessions'
-            })
-
-        builders
-            .addCase(fetchSession.pending, (state) => {
-                state.loading = true;
-                state.error = null;
-            })
-            .addCase(fetchSession.fulfilled, (state, action) => {
-                state.loading = false;
-                state.error = null;
-                state.currentSessionId = action.payload.id;
-                saveSessionId(action.payload.id);
-            })
-            .addCase(fetchSession.rejected, (state, action) => {
-                state.loading = false;
-                state.error = action.error.message || 'Failed to fetch session'
-            })
-
-        builders
-            .addCase(fetchMessages.pending, (state) => {
-                state.loading = true;
-                state.error = null;
-            })
-            .addCase(fetchMessages.fulfilled, (state, action) => {
-                state.loading = false;
-                state.error = null;
-                state.currentSessionId = action.payload.sessionId;
-                saveSessionId(action.payload.sessionId);
-                state.sessionmessages = action.payload.messages;
-            })
-            .addCase(fetchMessages.rejected, (state, action) => {
-                state.loading = false
-                state.error = action.error.message || 'Failed to fetch messages'
-            })
-    }
 })
 
 export const { setCurrentSession, addSession, clearMessages, updateSessionTitle } = sessionSlice.actions

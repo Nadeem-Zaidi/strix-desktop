@@ -88,7 +88,7 @@ export class VectorStore {
         return insert() as number;
     }
 
-    search(queryEmbedding: number[], topK = 5): (Chunk & { id: number; distance: number })[] {
+    search(queryEmbedding: number[], topK = 20): (Chunk & { id: number; distance: number })[] {
         const rows = this.db.prepare(`
             SELECT
                 c.id,

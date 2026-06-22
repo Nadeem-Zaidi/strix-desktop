@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../global/chat.css";
-import { BotMessage } from "../components/bot_message";
+import { BotMessage } from "../components/ui/bot_message";
 import { SideDrawer } from "../components/layout/sidebar";
 import { useSelector } from "react-redux";
 import { changeChatMode } from "../state_mngmt/slices/chat_mode_slice";

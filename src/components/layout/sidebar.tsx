@@ -6,18 +6,14 @@ import {
   faPenToSquare,
   faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { toggleSideBar } from '../../state_mngmt/slices/toggle_sidebar'
-import { useEffect } from "react"
-import { fetchMessages, fetchSessions, setCurrentSession } from "../../state_mngmt/slices/message_slice"
+import { setCurrentSession } from "../../state_mngmt/slices/message_slice"
 import { useAppDispatch, useAppSelector } from "../../state_mngmt/store"
-import { onAuthStateChanged } from "firebase/auth"
-import { auth } from "../../firebase/firebase_config"
 import { changeChatMode } from "../../state_mngmt/slices/chat_mode_slice"
 import { useNavigate } from "react-router-dom"
-import { loadSessions, newSession, switchSession } from "../../state_mngmt/slices/session_slice"
-import { SessionTitle } from "./session_title"
-import { IngestPanel } from "../ingest"
+import {  newSession, switchSession } from "../../state_mngmt/slices/session_slice"
+import { IngestPanel } from "./ingest"
 
 export const SideDrawer = () => {
   const navigate = useNavigate();
@@ -39,15 +35,6 @@ export const SideDrawer = () => {
     dispatch(newSession())
     dispatch(changeChatMode(false));
   }
-
-  useEffect(() => { 
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        appDispatch((loadSessions()))
-      }
-    })
-    return () => unsubscribe()
-  }, [appDispatch])
 
   return (
     <div className={showSideBar ? "sidebar" : "sidebar collapsed"}>
@@ -93,7 +80,7 @@ export const SideDrawer = () => {
         {showSideBar && (
           <div className="sidebar_user_profile">
             <div className="user_avatar">
-              {auth.currentUser?.displayName
+              {"Nadeem.Zaidi"
                 ?.split(" ")
                 .map(n => n[0])
                 .join("")
@@ -101,7 +88,7 @@ export const SideDrawer = () => {
                 .slice(0, 2) || "?"}
             </div>
             <div className="user_info">
-              <span className="user_name">{auth.currentUser?.displayName}</span>
+              <span className="user_name">Nadeem Zaidi</span>
               <span className="user_plan">Free plan</span>
             </div>
           </div>
