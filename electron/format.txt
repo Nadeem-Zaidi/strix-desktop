@@ -1,0 +1,323 @@
+[
+  {
+    type: 'message',
+    role: 'user',
+    content: 'give me the temperature only for gaya bihar'
+  }
+]
+{
+  type: 'response.created',
+  response: {
+    id: 'resp_0b389efe2cc71d27006a1a8301b5b881a2afb015d42b04544b',
+    object: 'response',
+    created_at: 1780122369,
+    status: 'in_progress',
+    background: false,
+    completed_at: null,
+    error: null,
+    frequency_penalty: 0,
+    incomplete_details: null,
+    instructions: null,
+    max_output_tokens: 1000,
+    max_tool_calls: null,
+    model: 'gpt-4o-2024-08-06',
+    moderation: null,
+    output: [],
+    parallel_tool_calls: true,
+    presence_penalty: 0,
+    previous_response_id: null,
+    prompt_cache_key: null,
+    prompt_cache_retention: 'in_memory',
+    reasoning: { context: null, effort: null, summary: null },
+    safety_identifier: null,
+    service_tier: 'auto',
+    store: true,
+    temperature: 0.7,
+    text: { format: [Object], verbosity: 'medium' },
+    tool_choice: 'auto',
+    tools: [ [Object] ],
+    top_logprobs: 0,
+    top_p: 1,
+    truncation: 'disabled',
+    usage: null,
+    user: null,
+    metadata: {}
+  },
+  sequence_number: 0
+}
+{
+  type: 'response.in_progress',
+  response: {
+    id: 'resp_0b389efe2cc71d27006a1a8301b5b881a2afb015d42b04544b',
+    object: 'response',
+    created_at: 1780122369,
+    status: 'in_progress',
+    background: false,
+    completed_at: null,
+    error: null,
+    frequency_penalty: 0,
+    incomplete_details: null,
+    instructions: null,
+    max_output_tokens: 1000,
+    max_tool_calls: null,
+    model: 'gpt-4o-2024-08-06',
+    moderation: null,
+    output: [],
+    parallel_tool_calls: true,
+    presence_penalty: 0,
+    previous_response_id: null,
+    prompt_cache_key: null,
+    prompt_cache_retention: 'in_memory',
+    reasoning: { context: null, effort: null, summary: null },
+    safety_identifier: null,
+    service_tier: 'auto',
+    store: true,
+    temperature: 0.7,
+    text: { format: [Object], verbosity: 'medium' },
+    tool_choice: 'auto',
+    tools: [ [Object] ],
+    top_logprobs: 0,
+    top_p: 1,
+    truncation: 'disabled',
+    usage: null,
+    user: null,
+    metadata: {}
+  },
+  sequence_number: 1
+}
+{
+  type: 'response.output_item.added',
+  item: {
+    id: 'ws_0b389efe2cc71d27006a1a8302c28081a28055f531fe924f74',
+    type: 'web_search_call',
+    status: 'in_progress',
+    action: { type: 'search' }
+  },
+  output_index: 0,
+  sequence_number: 2
+}
+{
+  type: 'response.web_search_call.in_progress',
+  item_id: 'ws_0b389efe2cc71d27006a1a8302c28081a28055f531fe924f74',
+  output_index: 0,
+  sequence_number: 3
+}
+{
+  type: 'response.web_search_call.searching',
+  item_id: 'ws_0b389efe2cc71d27006a1a8302c28081a28055f531fe924f74',
+  output_index: 0,
+  sequence_number: 4
+}
+{
+  type: 'response.web_search_call.completed',
+  item_id: 'ws_0b389efe2cc71d27006a1a8302c28081a28055f531fe924f74',
+  output_index: 0,
+  sequence_number: 5
+}
+{
+  type: 'response.output_item.done',
+  item: {
+    id: 'ws_0b389efe2cc71d27006a1a8302c28081a28055f531fe924f74',
+    type: 'web_search_call',
+    status: 'completed',
+    action: {
+      type: 'search',
+      queries: [Array],
+      query: 'current temperature Gaya Bihar'
+    }
+  },
+  output_index: 0,
+  sequence_number: 6
+}
+{
+  type: 'response.output_item.added',
+  item: {
+    id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+    type: 'message',
+    status: 'in_progress',
+    content: [],
+    role: 'assistant'
+  },
+  output_index: 1,
+  sequence_number: 7
+}
+{
+  type: 'response.content_part.added',
+  content_index: 0,
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  output_index: 1,
+  part: { type: 'output_text', annotations: [], logprobs: [], text: '' },
+  sequence_number: 8
+}
+{
+  type: 'response.output_text.delta',
+  content_index: 0,
+  delta: 'Here',
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  logprobs: [],
+  obfuscation: 'SBj2Ti4itEu3',
+  output_index: 1,
+  sequence_number: 9
+}
+****** Chunk *****************
+{ content: 'Here', isToolCall: false, isDone: false }
+*******End of Chunk***********
+{
+  type: 'response.output_text.delta',
+  content_index: 0,
+  delta: 'ΓÇÖs the current temperature for Gaya, Bihar:\n' +
+    '\n' +
+    'Current Conditions: 84ΓÇ»┬░F (29ΓÇ»┬░C',
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  logprobs: [],
+  obfuscation: 'rRT',
+  output_index: 1,
+  sequence_number: 10
+}
+****** Chunk *****************
+{
+  content: 'ΓÇÖs the current temperature for Gaya, Bihar:\n' +
+    '\n' +
+    'Current Conditions: 84ΓÇ»┬░F (29ΓÇ»┬░C',
+  isToolCall: false,
+  isDone: false
+}
+*******End of Chunk***********
+{
+  type: 'response.output_text.delta',
+  content_index: 0,
+  delta: ') \n\nIf you',
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  logprobs: [],
+  obfuscation: 'HqG9s8',
+  output_index: 1,
+  sequence_number: 11
+}
+****** Chunk *****************
+{ content: ') \n\nIf you', isToolCall: false, isDone: false }
+*******End of Chunk***********
+{
+  type: 'response.output_text.delta',
+  content_index: 0,
+  delta: 'ΓÇÖd like additional detailsΓÇösuch as hourly temperatures, forecast for the day ahead, or',
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  logprobs: [],
+  obfuscation: 'OD85dRvcxG',
+  output_index: 1,
+  sequence_number: 12
+}
+****** Chunk *****************
+{
+  content: 'ΓÇÖd like additional detailsΓÇösuch as hourly temperatures, forecast for the day ahead, or',
+  isToolCall: false,
+  isDone: false
+}
+*******End of Chunk***********
+{
+  type: 'response.output_text.delta',
+  content_index: 0,
+  delta: 'for the day ahead, or weather conditionsΓÇöjust let me know!',
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  logprobs: [],
+  obfuscation: 'GKoOBx',
+  output_index: 1,
+  sequence_number: 13
+}
+****** Chunk *****************
+{
+  content: 'for the day ahead, or weather conditionsΓÇöjust let me know!',
+  isToolCall: false,
+  isDone: false
+}
+*******End of Chunk***********
+{
+  type: 'response.output_text.done',
+  content_index: 0,
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  logprobs: [],
+  output_index: 1,
+  sequence_number: 14,
+  text: 'HereΓÇÖs the current temperature for Gaya, Bihar:\n' +
+    '\n' +
+    'Current Conditions: 84ΓÇ»┬░F (29ΓÇ»┬░C) εêÇciteεêéturn0forecast0εêü\n' +
+    '\n' +
+    'If youΓÇÖd like additional detailsΓÇösuch as hourly temperatures, forecast for the day ahead, or weather conditionsΓÇöjust let me know!'
+}
+{
+  type: 'response.content_part.done',
+  content_index: 0,
+  item_id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+  output_index: 1,
+  part: {
+    type: 'output_text',
+    annotations: [],
+    logprobs: [],
+    text: 'HereΓÇÖs the current temperature for Gaya, Bihar:\n' +
+      '\n' +
+      'Current Conditions: 84ΓÇ»┬░F (29ΓÇ»┬░C) εêÇciteεêéturn0forecast0εêü\n' +
+      '\n' +
+      'If youΓÇÖd like additional detailsΓÇösuch as hourly temperatures, forecast for the day ahead, or weather conditionsΓÇöjust let me know!'
+  },
+  sequence_number: 15
+}
+{
+  type: 'response.output_item.done',
+  item: {
+    id: 'msg_0b389efe2cc71d27006a1a83049cc081a299cefecb10250ed6',
+    type: 'message',
+    status: 'completed',
+    content: [ [Object] ],
+    role: 'assistant'
+  },
+  output_index: 1,
+  sequence_number: 16
+}
+{
+  type: 'response.completed',
+  response: {
+    id: 'resp_0b389efe2cc71d27006a1a8301b5b881a2afb015d42b04544b',
+    object: 'response',
+    created_at: 1780122369,
+    status: 'completed',
+    background: false,
+    completed_at: 1780122373,
+    error: null,
+    frequency_penalty: 0,
+    incomplete_details: null,
+    instructions: null,
+    max_output_tokens: 1000,
+    max_tool_calls: null,
+    model: 'gpt-4o-2024-08-06',
+    moderation: null,
+    output: [ [Object], [Object] ],
+    parallel_tool_calls: true,
+    presence_penalty: 0,
+    previous_response_id: null,
+    prompt_cache_key: null,
+    prompt_cache_retention: 'in_memory',
+    reasoning: { context: null, effort: null, summary: null },
+    safety_identifier: null,
+    service_tier: 'default',
+    store: true,
+    temperature: 0.7,
+    text: { format: [Object], verbosity: 'medium' },
+    tool_choice: 'auto',
+    tools: [ [Object] ],
+    top_logprobs: 0,
+    top_p: 1,
+    truncation: 'disabled',
+    usage: {
+      input_tokens: 2627,
+      input_tokens_details: [Object],
+      output_tokens: 95,
+      output_tokens_details: [Object],
+      total_tokens: 2722
+    },
+    user: null,
+    metadata: {}
+  },
+  sequence_number: 17
+}
+****** Chunk *****************
+{ content: '', isToolCall: false, isDone: true }
+*******End of Chunk***********

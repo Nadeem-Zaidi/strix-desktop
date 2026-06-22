@@ -1,0 +1,26 @@
+
+
+.file_exp_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.file_exp_content{
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr;
+    width:60%;
+
+}
+
+.file_exp_cell {
+    padding: 6px 8px;
+}
+
+.header{
+    font-weight: 600;
+    color: gray;
+}
